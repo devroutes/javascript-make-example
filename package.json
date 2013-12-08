@@ -1,0 +1,11 @@
+{
+  "name": "javascript-make-example",
+  "version": "0.0.1",
+  "private": true,
+  "dependencies": {
+    "browserify": "~2.35.2"
+  },
+  "scripts": {
+    
+  }
+}
