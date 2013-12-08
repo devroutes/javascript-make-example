@@ -1,6 +1,6 @@
 # Simple (default since first) rule to run your application.
 run:
-	@ node src/main.js
+	node src/main.js
 
 # Building is super-easy too!
 build: build-js
@@ -14,3 +14,6 @@ clean:
 # Old Unix stuff is so cool.
 static/bundle.js: src/*.js
 	browserify src/main.js > $@
+
+watch:
+	ruby -rubygems -rlisten -e 'Listen.to("src") {|m, a, r| Kernel.system("make build") }.start; trap("SIGINT") { Kernel.exit }; sleep'
